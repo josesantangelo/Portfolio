@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Link } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 import { navBarElements } from '../utils/constants'
 import { MotionLink, NavLink } from '../utils/animations'
 
@@ -12,8 +12,6 @@ const Navbar = () => {
             backgroundColor="#131313"
             gap={8}
             padding={4}
-
-
         >
             {navBarElements.map(element => {
                 return (

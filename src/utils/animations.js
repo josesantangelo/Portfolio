@@ -1,4 +1,4 @@
-import { Link, Text } from '@chakra-ui/react'
+import { Link, Text, Button } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 
@@ -16,9 +16,11 @@ export const NavLink = {
     }
 }
 
+const HomeFalls = -180
+
 export const HomeName = {
     hidden: {
-        y: -200,
+        y: HomeFalls,
         opacity: 0,
     },
     visible: {
@@ -32,7 +34,7 @@ export const HomeName = {
 
 export const HomeDegree = {
     hidden: {
-        y: 200,
+        y: HomeFalls * -1,
         opacity: 0,
     },
     visible: {
@@ -45,8 +47,32 @@ export const HomeDegree = {
 }
 
 
+
+export const HomeButton = {
+
+    hidden: {
+        x: 500,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+    },
+    transition: {
+        type: "spring",
+        delay: 1,
+        duration: 1,
+        stiffness: 120,
+    }
+
+}
+
+
+
+
 export const MotionLink = motion(Link)
 export const MotionText = motion(Text)
+export const MotionButton = motion(Button)
 
 
 
